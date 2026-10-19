@@ -1,0 +1,84 @@
+:root {
+  --dark-green: #0D3C1F;
+  --sage-green: #3D7F61;
+  --coral-accent: #F69066;
+  --off-white: #FAF9F6;
+}
+
+.hero-bg-layer {
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: -10;
+  background-image: url('./assets/Background.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 0.9;
+  filter: blur(4px);
+  transform: scale(1.05);
+}
+
+.glass-card {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 1rem;
+}
+
+.glass-header-badge {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 1rem;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 24px rgba(13, 60, 31, 0.08);
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-up {
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-play-state: paused;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-start infinite;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--off-white);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--sage-green);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-green);
+}
+
+.room-card-selected {
+  border-color: var(--dark-green) !important;
+  box-shadow: 0 0 0 2px var(--dark-green), 0 8px 30px rgba(13, 60, 31, 0.12) !important;
+  background-color: #F5F8F6 !important;
+}

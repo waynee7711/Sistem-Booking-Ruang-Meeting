@@ -1,13 +1,64 @@
 {
   "rooms": [
-    { "id": 1, "name": "Ruang Alpha", "capacity": 10, "pricePerHour": 100000, "facilities": ["Projector", "Whiteboard"], "image": "https://placehold.co/400x200" },
-    { "id": 2, "name": "Ruang Beta", "capacity": 4, "pricePerHour": 50000, "facilities": ["TV", "Wifi"], "image": "https://placehold.co/400x200" },
-    { "id": 3, "name": "Ruang Charlie", "capacity": 20, "pricePerHour": 250000, "facilities": ["Sound System", "Mic"], "image": "https://placehold.co/400x200" }
+    {
+      "id": 1,
+      "name": "Ruang Alpha",
+      "capacity": 4,
+      "pricePerHour": 50000,
+      "facilities": [
+        "Whiteboard",
+        "Wifi"
+      ],
+      "image": "./assets/room1_alpha.JPEG"
+    },
+    {
+      "id": 2,
+      "name": "Ruang Beta",
+      "capacity": 10,
+      "pricePerHour": 100000,
+      "facilities": [
+        "TV",
+        "Projector"
+      ],
+      "image": "./assets/room2_beta.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Ruang Charlie",
+      "capacity": 20,
+      "pricePerHour": 250000,
+      "facilities": [
+        "Sound System",
+        "Mic"
+      ],
+      "image": "./assets/room3_charlie.JPEG"
+    }
   ],
   "slots": [
-    { "id": 1, "roomId": 1, "time": "07:00-09:00", "isAvailable": true },
-    { "id": 2, "roomId": 1, "time": "10:00-12:00", "isAvailable": false },
-    { "id": 3, "roomId": 2, "time": "13:00-15:00", "isAvailable": true }
+    {
+      "id": 1,
+      "roomId": 1,
+      "time": "09:00-10:00",
+      "isAvailable": true
+    },
+    {
+      "id": 2,
+      "roomId": 1,
+      "time": "10:00-11:00",
+      "isAvailable": false
+    },
+    {
+      "id": 3,
+      "roomId": 2,
+      "time": "13:00-14:00",
+      "isAvailable": true
+    },
+    {
+      "id": 4,
+      "roomId": 3,
+      "time": "09:00-10:00",
+      "isAvailable": true
+    }
   ],
   "bookings": []
 }
