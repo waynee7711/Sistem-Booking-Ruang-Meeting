@@ -17,6 +17,15 @@ Aplikasi pemesanan ruang meeting dengan frontend web dan REST API berbasis Larav
 - **Backend:** PHP 8.2+, Laravel 12, dan REST API.
 - **Database:** MySQL.
 
+## Asumsi Sistem
+
+Dalam pengembangan dan perancangan aplikasi ini, beberapa asumsi dasar yang digunakan meliputi:
+
+1. **Jam operasional:** Slot waktu pemesanan ruangan diasumsikan tersedia secara standar pada pukul 09.00 hingga 17.00 setiap harinya.
+2. **Ketersediaan slot harian:** Setiap ruangan memiliki slot per jam yang dapat dipesan. Slot yang sudah terlewat waktunya pada hari yang sama akan otomatis ditandai tidak tersedia untuk mencegah booking di masa lalu (*past time*).
+3. **Sistem reservasi tunggal (tanpa autentikasi ketat):** Aplikasi ini berasumsi bahwa sistem pemesanan ditujukan untuk penggunaan cepat (publik/internal instansi) di mana pengguna cukup mengisi data pemesan valid tanpa perlu registrasi atau login akun terlebih dahulu.
+4. **Lingkungan deployment:** Aplikasi mendukung penyimpanan data terpusat menggunakan MySQL (baik secara lokal menggunakan XAMPP/Laragon maupun secara *cloud* menggunakan layanan *free hosting* seperti InfinityFree).
+
 ## Struktur Proyek
 
 ```text
@@ -41,6 +50,14 @@ Aplikasi pemesanan ruang meeting dengan frontend web dan REST API berbasis Larav
 - MySQL Server.
 - Browser modern.
 - Koneksi internet untuk memuat Tailwind CSS, Lucide Icons, dan Google Fonts dari CDN.
+
+## Mencoba Versi Online
+
+Aplikasi juga dapat dicoba secara online melalui hosting InfinityFree:
+
+**http://bookingruang.infinityfreeapp.com**
+
+Gunakan opsi ini untuk mencoba aplikasi tanpa menyiapkan backend dan frontend secara lokal. Jika ingin menjalankan aplikasi secara manual di komputer, ikuti langkah pada bagian [Menjalankan Secara Lokal](#menjalankan-secara-lokal).
 
 ## Menjalankan Secara Lokal
 
