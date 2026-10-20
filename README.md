@@ -1,6 +1,6 @@
 # Room Spaces — Sistem Booking Ruang Meeting
 
-Aplikasi pemesanan ruang meeting dengan frontend web dan REST API berbasis Laravel. Pengguna dapat melihat ruangan, memilih tanggal dan slot waktu, mengisi data pemesan, lalu menerima konfirmasi booking.
+Aplikasi pemesanan ruang meeting dengan frontend web berbasis HTML CSS JS, dan REST API berbasis Laravel serta database menggunakan MySQL. Pengguna dapat melihat ruangan, memilih tanggal dan slot waktu, mengisi data pemesan, lalu menerima konfirmasi booking.
 
 ## Fitur
 
@@ -47,7 +47,7 @@ Dalam pengembangan dan perancangan aplikasi ini, beberapa asumsi dasar yang digu
 
 - PHP 8.2 atau lebih baru dan ekstensi yang dibutuhkan Laravel.
 - Composer.
-- MySQL Server.
+- MySQL Server, melalui XAMPP.
 - Browser modern.
 - Koneksi internet untuk memuat Tailwind CSS, Lucide Icons, dan Google Fonts dari CDN.
 
@@ -61,7 +61,13 @@ Gunakan opsi ini untuk mencoba aplikasi tanpa menyiapkan backend dan frontend se
 
 ## Menjalankan Secara Lokal
 
-### 1. Siapkan backend
+### 1. Nyalakan database lokal
+
+Buka **XAMPP Control Panel** lalu klik **Start** pada baris **MySQL**. Apache tidak diperlukan untuk menjalankan aplikasi dengan langkah di bawah ini. Nyalakan **Apache** juga hanya jika Anda ingin membuka phpMyAdmin melalui `http://localhost/phpmyadmin` untuk membuat database.
+
+Di phpMyAdmin, buat database baru contohnya bernama `sistem_booking_ruangan`. Jika menggunakan MySQL Server secara langsung, pastikan layanan MySQL sudah berjalan dan buat database dengan nama yang sama.
+
+### 2. Siapkan backend
 
 Buka terminal di root repository, lalu jalankan:
 
@@ -83,7 +89,7 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-Buat database `sistem_booking_ruangan` di MySQL terlebih dahulu, lalu jalankan migrasi dan data awal:
+Setelah database dibuat dan MySQL berjalan, jalankan migrasi dan data awal:
 
 ```powershell
 php artisan migrate --seed
@@ -95,7 +101,7 @@ Nyalakan API Laravel:
 php artisan serve --host=127.0.0.1 --port=8000
 ```
 
-### 2. Jalankan frontend
+### 3. Jalankan frontend
 
 Buka terminal kedua dari root repository:
 
